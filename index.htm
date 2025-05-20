@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcelo Dalton | Portfólio DEV</title>
+  <link rel="stylesheet" href="/Projeto Site/css/style.css" />
+  <script defer src="/Projeto Site/js/scripts.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="/Projeto Site/img/logo.png" alt="Logo Marcelo Dalton">
+            Marcelo Dalton
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#hero"><span class="hover-underline">Home</span></a></li>
+                <li><a href="#sobre"><span class="hover-underline">Projetos</span></a></li>
+                <li><a href="#experiencias"><span class="hover-underline">Sobre</span></a></li>
+                <li><a href="#contato"><span class="hover-underline">Contato</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+            <h1>Desenvolvedor Full Stack & FiveM</h1>
+            <p>Transformando ideias em soluções digitais modernas.</p>
+            <a href="#contato" class="btn">Entre em Contato</a>
+
+            <div class="social-icons">
+                <a href="https://github.com/MarceloDalton" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/EspanhaMafia" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/marcelo.espanha/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            </div>
+            <div class="hero-image">
+            <img src="./img/Minha foto.jpg" alt="Marcelo Dalton">
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section sobre">
+        <div class="sobre-container">
+
+        <!-- LADO DIREITO: Quadrados com soft skills -->
+        <div class="soft-skills-box">
+            <div class="soft-skills-scroll">
+                <div class="soft-skill">Trabalho em equipe</div>
+                <div class="soft-skill">Comunicação</div>
+                <div class="soft-skill">Resolução de Problemas</div>
+                <div class="soft-skill">Autonomia</div>
+                <div class="soft-skill">Adaptabilidade</div>
+
+                <!-- DUPLICADO para criar o loop perfeito -->
+                <div class="soft-skill">Habilidade de liderança</div>
+                <div class="soft-skill">Resiliência</div>
+                <div class="soft-skill">Resolução de Problemas</div>
+                <div class="soft-skill">Autonomia</div>
+                <div class="soft-skill">Adaptabilidade</div>
+            </div>
+        </div>
+        
+        <!-- CENTRO: Texto em destaque -->
+        <div class="sobre-texto">
+            <h2>Sobre Mim</h2>
+            <p>Eu sou Marcelo Henrique e sou um desenvolvedor back-end com vasta experiência em projetos para FiveM usando Lua, JavaScript e C#. Trabalho elaborando soluções otimizadas, consistindo em desempenho, segurança e escalabilidade. Sou formado em Sistemas de Informação e possuo uma base sólida em desenvolvimento de jogos e web.</p>
+        </div>
+
+        <!-- LADO ESQUERDO: Gráfico -->
+        <div class="chart-container">
+        <canvas id="skillsRadar"></canvas>
+        </div>
+
+    </div>
+    </section>
+
+
+    <section id="experiencias" class="section">
+        <h2>Experiências</h2>
+        <p class="experiencias-texto">
+            Tenho mais de 5 anos de experiência em desenvolvimento web, com foco em aplicações modernas e integrações profundas com a plataforma FiveM. Domino diversas linguagens e frameworks, sempre buscando performance, segurança e estética.
+        </p>
+
+        <div class="carousel-container">
+            <div class="carousel" id="techCarousel">
+                <!-- Exemplo de card -->
+                <div class="tech-card" data-stars="3">
+                    <img src="./img/py.png" alt="Python">
+                    <h3>Python</h3>
+                    <p>Scripts e automações eficientes para backend, análise de dados e integração com APIs. Utilizado para desenvolver ferramentas rápidas, bots e soluções robustas com foco em produtividade.</p>
+                    <div class="stars"></div>
+                </div>
+
+                <div class="tech-card" data-stars="4">
+                        <img src="./img/js.png" alt="JavaScript">
+                        <h3>JavaScript</h3>
+                        <p>Criação de interfaces dinâmicas e interativas com Vue.js. Uso avançado de manipulação DOM, eventos, APIs REST, e lógica assíncrona com Promises e async/await.</p>
+                        <div class="stars"></div>
+                </div>
+
+                <div class="tech-card" data-stars="5">
+                        <img src="./img/Lua.png" alt="Lua">
+                        <h3>Lua</h3>
+                        <p>Linguagem principal utilizada em scripts para servidores FiveM. Experiência sólida com client.lua, server.lua, e integração com front-end via NUI, otimizando lógica de jogo e desempenho.</p>
+                        <div class="stars"></div>
+                </div>
+
+                <div class="tech-card" data-stars="3">
+                        <img src="./img/c.png" alt="C#">
+                        <h3>C#</h3>
+                        <p>Desenvolvimento de aplicações desktop, scripts para servidores, e integração com bases de dados usando Entity Framework. Experiência com estruturas como MVC e lógica de negócio em back-end.</p>
+                        <div class="stars"></div>
+                </div>
+
+                <div class="tech-card" data-stars="3">
+                        <img src="./img/cc.png" alt="C++">
+                        <h3>C++</h3>
+                        <p>Conhecimento aplicado em otimizações de desempenho e estruturas de sistemas, principalmente em bibliotecas nativas e extensões. Útil em contextos que exigem performance crítica.</p>
+                        <div class="stars"></div>
+                </div>
+
+                <div class="tech-card" data-stars="4">
+                        <img src="./img/html.png" alt="HTML">
+                        <h3>HTML</h3>
+                        <p>Estrutura semântica de interfaces web modernas com foco em acessibilidade, SEO e organização clara do conteúdo. Uso avançado de componentes reutilizáveis e tags semânticas.</p>
+                        <div class="stars"></div>
+                </div>
+
+                <div class="tech-card" data-stars="3">
+                        <img src="./img/css.png" alt="CSS">
+                        <h3>CSS</h3>
+                        <p>Estilização responsiva com uso de variáveis, animações, e designs modernos. Aplicação de conceitos como Flexbox, Grid e media queries para experiência fluida em todas resoluções.</p>
+                        <div class="stars"></div>
+                </div>
+
+                <div class="tech-card" data-stars="3">
+                        <img src="./img/SQL3.png" alt="SQL">
+                        <h3>SQL</h3>
+                        <p>Modelagem de dados, criação de estruturas relacionais otimizadas e desenvolvimento de queries eficientes. Experiência com MySQL, MariaDB e integração com back-ends em PHP, Node.js e C#.</p>
+                        <div class="stars"></div>
+                </div>
+                
+
+                <!-- Adicione os demais aqui: C#, C++, Lua, HTML, etc -->
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="projetos" class="section">
+        <h2>Projetos</h2>
+        <div class="grid">
+            <div class="card">Painel Cripto FiveM</div>
+            <div class="card">Dashboard de Controle Vue.js</div>
+            <div class="card">Sistema de Orçamento Online</div>
+        </div>
+    </section>
+
+    <section id="servicos" class="section">
+            <h2>Serviços</h2>
+            <p>Desenvolvimento sob medida, sistemas integrados, interfaces modernas e muito mais.</p>
+    </section>
+
+    <section id="contato" class="section">
+        <h2>Contato</h2>
+        <form>
+            <input type="text" placeholder="Seu nome" required />
+            <input type="email" placeholder="Seu e-mail" required />
+            <textarea placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+            <p>&copy; 2025 Marcelo Dalton - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
