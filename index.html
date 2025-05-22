@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="./css/style.css" />
   <script defer src="./js/scripts.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
+
 
 <body>
     <header class="navbar">
@@ -28,18 +28,21 @@
     </header>
 
     <section class="hero">
+        <div class="code-rain" id="codeRain"></div>
         <div class="hero-content">
+    
             <div class="hero-text">
-            <h1>Desenvolvedor Full Stack & FiveM</h1>
-            <p>Transformando ideias em soluções digitais modernas.</p>
-            <a href="#contato" class="btn">Entre em Contato</a>
+                <h1>Desenvolvedor Back-End, Full Stack & FiveM</h1>
+                <p>Transformando ideias em soluções digitais modernas.</p>
+                <a href="#contato" class="btn">Entre em Contato</a>
 
-            <div class="social-icons">
-                <a href="https://github.com/MarceloDalton" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.facebook.com/EspanhaMafia" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/marcelo.espanha/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <div class="social-icons">
+                    <a href="https://github.com/MarceloDalton" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/EspanhaMafia" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/marcelo.espanha/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-            </div>
+
             <div class="hero-image">
             <img src="./img/Minha foto.jpg" alt="Marcelo Dalton">
             </div>
@@ -90,7 +93,7 @@
 
         <div class="carousel-container">
             <div class="carousel" id="techCarousel">
-                <!-- Exemplo de card -->
+                <!-- card -->
                 <div class="tech-card" data-stars="3">
                     <img src="./img/py.png" alt="Python">
                     <h3>Python</h3>
@@ -146,29 +149,96 @@
                         <p>Modelagem de dados, criação de estruturas relacionais otimizadas e desenvolvimento de queries eficientes. Experiência com MySQL, MariaDB e integração com back-ends em PHP, Node.js e C#.</p>
                         <div class="stars"></div>
                 </div>
-                
-
-                <!-- Adicione os demais aqui: C#, C++, Lua, HTML, etc -->
             </div>
         </div>
 
     </section>
 
-
+    <!-- Sessão de Projetos -->
     <section id="projetos" class="section">
         <h2>Projetos</h2>
-        <div class="grid">
-            <div class="card">Painel Cripto FiveM</div>
-            <div class="card">Dashboard de Controle Vue.js</div>
-            <div class="card">Sistema de Orçamento Online</div>
+        <p class="experiencias-texto">Muito projetos interessantes </p>
+        <div class="proj-carousel-container">
+
+            <button class="proj-carousel-btn prev" aria-label="Previous project">&lt;</button>
+                <!-- Carousel de porojetos -->
+                <div class="proj-carousel">
+                    <div class="proj-card" tabindex="0">
+                        <h3>Painel Cripto FiveM</h3>
+                        <p>Controle financeiro integrado ao FiveM com criptomoedas.</p>
+                            <div class="full-desc" style="display:none;">
+                                    Aqui está a descrição completa do projeto, com imagens, links e detalhes adicionais.
+                            </div>
+                        <button class="btn-expand">Saiba Mais</button>
+                    </div>
+
+                    <!-- Cards de projetos feitos -->
+                    <div class="proj-card" tabindex="0">
+                        <h3>Dashboard de Controle Vue.js</h3>
+                        <p>Painel interativo para gerenciamento com Vue.js e gráficos dinâmicos.</p>
+                            <div class="full-desc" style="display:none;">
+                                    Aqui está a descrição completa do projeto, com imagens, links e detalhes adicionais.
+                            </div>
+                        <button class="btn-expand">Saiba Mais</button>
+                    </div>
+
+                    <div class="proj-card" tabindex="0">
+                        <h3>Sistema de Orçamento Online</h3>
+                        <p>Ferramenta completa para geração e gestão de orçamentos online.</p>
+                            <div class="full-desc" style="display:none;">
+                                    Aqui está a descrição completa do projeto, com imagens, links e detalhes adicionais.
+                            </div>
+                        <button class="btn-expand">Saiba Mais</button>
+                    </div>
+
+                    <div class="proj-card" tabindex="0">
+                        <h3>Vago</h3>
+                        <p>Vago</p>
+                            <div class="full-desc" style="display:none;">
+                                    Aqui está a descrição completa do projeto, com imagens, links e detalhes adicionais.
+                            </div>
+                        <button class="btn-expand">Saiba Mais</button>
+                    </div>
+
+                    <div class="proj-card" tabindex="0">
+                        <h3>Vago</h3>
+                        <p>Vago</p>
+                            <div class="full-desc" style="display:none;">
+                                    Aqui está a descrição completa do projeto, com imagens, links e detalhes adicionais.
+                            </div>
+                        <button class="btn-expand">Saiba Mais</button>
+                    </div>
+
+                    <div class="proj-card" tabindex="0">
+                        <h3>Vago</h3>
+                        <p>Vago</p>
+                            <div class="full-desc" style="display:none;">
+                                    Aqui está a descrição completa do projeto, com imagens, links e detalhes adicionais.
+                            </div>
+                        <button class="btn-expand">Saiba Mais</button>
+                    </div>
+
+                </div>
+
+            <button class="proj-carousel-btn next" aria-label="Next project">&gt;</button>
         </div>
+
+        <div class="proj-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" hidden>
+            <div class="proj-modal-content">
+                <button class="proj-modal-close" aria-label="Fechar">&times;</button>
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+
     </section>
 
     <section id="servicos" class="section">
             <h2>Serviços</h2>
-            <p>Desenvolvimento sob medida, sistemas integrados, interfaces modernas e muito mais.</p>
+            <p class="experiencias-texto">Desenvolvimento sob medida, sistemas integrados, interfaces modernas e muito mais.</p>
     </section>
 
+    <!-- Sessão de contatos -->
     <section id="contato" class="section">
         <h2>Contato</h2>
         <form>
@@ -179,10 +249,14 @@
         </form>
     </section>
 
+
+    <!-- Roda pé com Cpy -->
     <footer>
             <p>&copy; 2025 Marcelo Dalton - Todos os direitos reservados</p>
     </footer>
 
+    <!-- Importes de JS & Bibiliotecas -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </body>

@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   
+  // Sistema de estrelas
   const techCards = document.querySelectorAll('.tech-card');
 
   techCards.forEach(card => {
@@ -59,7 +60,70 @@ document.addEventListener("DOMContentLoaded", () => {
       starContainer.appendChild(star);
     }
   });
+
+  // Animação de lestras caindo
+
+  const container = document.getElementById("codeRain");
+  const characters = ["00010110", "111010110", "{", "}", "[", "]", ";", ".", ",", "<", ">", "+", "-", "*", "1110110001", "=", "!", "?", ":","const", "let", "var", "function", "return", "=>", "if", "else", "for", "while", "true", "false", "null", "undefined"];
+
+  const numberOfSpans = 50;
+
+  for (let i = 0; i < numberOfSpans; i++) {
+    const span = document.createElement("span");
+    span.textContent = characters[Math.floor(Math.random() * characters.length)];
+    span.style.left = Math.random() * 100 + "vw";
+    span.style.animationDuration = 2 + Math.random() * 3 + "s";
+    span.style.animationDelay = Math.random() * 5 + "s";
+    container.appendChild(span);
+  }
+
+  // Carousel 2 dos projetos
   
+  const projCarousel = document.querySelector(".proj-carousel");
+  const btnPrev = document.querySelector(".proj-carousel-btn.prev");
+  const btnNext = document.querySelector(".proj-carousel-btn.next");
+  const modalProj = document.getElementById("projectModal");
+  const modalProjTitle = modalProj.querySelector("#modalTitle");
+  const modalProjDesc = modalProj.querySelector("#modalDesc");
+  const modalProjClose = modalProj.querySelector(".proj-modal-close");
+
+  btnPrev.addEventListener("click", () => {
+    projCarousel.scrollBy({ left: -300, behavior: "smooth" });
+  });
+
+  btnNext.addEventListener("click", () => {
+    projCarousel.scrollBy({ left: 300, behavior: "smooth" });
+  });
+
+  projCarousel.querySelectorAll(".btn-expand").forEach(button => {
+    button.addEventListener("click", (e) => {
+      const cardProj = e.target.closest(".proj-card");
+      modalProjTitle.textContent = cardProj.querySelector("h3").textContent;
+      modalProjDesc.textContent = cardProj.querySelector(".full-desc").textContent;
+
+      modalProj.removeAttribute("hidden");
+      modalProj.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  modalProjClose.addEventListener("click", closeModalProj);
+  modalProj.addEventListener("click", e => {
+    if (e.target === modalProj) closeModalProj();
+  });
+
+  function closeModalProj() {
+    modalProj.setAttribute("hidden", "");
+    modalProj.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modalProj.hasAttribute("hidden")) {
+      closeModalProj();
+    }
+  });
+
     
 });
 
@@ -67,7 +131,7 @@ const ctx = document.getElementById('skillsRadar').getContext('2d');
 new Chart(ctx, {
   type: 'radar',
   data: {
-    labels: ['Back-end', 'Front-end', 'Comunicação', 'Resolução de Problemas', 'Organização'],
+    labels: ['Comunicação', 'Front', 'Back', 'Resolução de Problemas', 'Organização'],
     datasets: [{
       label: 'Minhas Skills',
       data: [80, 50, 75, 70, 75],
