@@ -179,7 +179,29 @@ body {
   font-size: 16px;
 }
 
+/* Animação de numeros surgindo e aparecendo frases */
 
+.animated-text {
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #ffffff; /* cor final do texto */
+  min-height: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.animated-char {
+  display: inline-block;
+  color: #00f0ff; /* azul */
+}
+
+.animated-char:nth-child(even) {
+  color: #00ff9c; /* verde */
+}
+
+
+/* Icones sociais do projetos */
 .social-icons {
   margin-top: 2rem;
   display: flex;

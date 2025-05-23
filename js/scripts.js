@@ -45,6 +45,90 @@ document.addEventListener("DOMContentLoaded", () => {
       carousel.style.animationPlayState = 'running';
     });
   }
+
+  // Sistema de numeros e frase aparecendo
+
+  const phrases = [
+  "Transformando ideias em soluções digitais modernas.",
+  "Desenvolvendo sistemas personalizados para seu negócio.",
+  "Criando experiências digitais inovadoras e funcionais."
+  ];
+
+  const chars = "01{}<>;=()";
+  const textElement = document.getElementById("animated-text");
+
+  let phraseIndex = 0;
+
+  function randomChar() {
+    return chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+
+  function animateIn(text, callback) {
+    let iterations = 0;
+    let displayed = Array(text.length).fill('');
+
+    function step() {
+      let html = '';
+      for (let i = 0; i < text.length; i++) {
+        if (i < iterations) {
+          html += `<span style="color: #ffffff;">${text[i]}</span>`;
+        } else {
+          const char = randomChar();
+          html += `<span class="animated-char">${char}</span>`;
+        }
+      }
+      textElement.innerHTML = html;
+
+      if (iterations < text.length) {
+        iterations++;
+        setTimeout(step, 50);
+      } else if (callback) {
+        callback();
+      }
+    }
+
+    step();
+  }
+
+  function animateOut(callback) {
+    let iterations = 0;
+    let length = textElement.textContent.length;
+
+    function step() {
+      let html = '';
+      for (let i = 0; i < length; i++) {
+        if (i < iterations) {
+          html += `<span class="animated-char">${randomChar()}</span>`;
+        } else {
+          html += '&nbsp;';
+        }
+      }
+      textElement.innerHTML = html;
+
+      if (iterations < length) {
+        iterations++;
+        setTimeout(step, 30);
+      } else if (callback) {
+        callback();
+      }
+    }
+
+    step();
+  }
+
+  function loopPhrases() {
+    animateIn(phrases[phraseIndex], () => {
+      setTimeout(() => {
+        animateOut(() => {
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          loopPhrases();
+        });
+      }, 2500);
+    });
+  }
+
+  loopPhrases();
+
   
   // Sistema de estrelas
   const techCards = document.querySelectorAll('.tech-card');
