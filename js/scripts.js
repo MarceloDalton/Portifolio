@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Carousel 2 dos projetos
-  
   const projCarousel = document.querySelector(".proj-carousel");
   const btnPrev = document.querySelector(".proj-carousel-btn.prev");
   const btnNext = document.querySelector(".proj-carousel-btn.next");
@@ -125,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Mostrar meus contatos
-
   const btnMostrar = document.getElementById("btnMostrarContato");
   const infoContato = document.getElementById("infoContato");
 
