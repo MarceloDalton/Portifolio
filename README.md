@@ -44,12 +44,8 @@ Através deste site, é possível conhecer meus projetos, serviços, habilidades
 
 ## Como Usar
 
-1. Clone o repositório:
-   `git clone https://github.com/MarceloDalton/Portifolio.git`
-2. Abra o arquivo `index.html` em seu navegador preferido.
-3. Personalize o conteúdo conforme necessário para seus próprios projetos e serviços.
-4. Para editar estilos e scripts, utilize os arquivos CSS e JS localizados na pasta `/css` e `/js` (ou conforme a estrutura criada).
-5. Faça commits regulares para manter controle das versões e utilize o GitHub para hospedagem e colaboração.
+1. Para acessar digite:
+   `marcelodalton.github.io/Portifolio/`
 
 ---
 
