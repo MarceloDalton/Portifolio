@@ -1,6 +1,6 @@
 # Portfólio Marcelo Dalton
 
-**Versão Atual: 1.0.0**
+**Versão Atual: 1.0.1**
 
 ## Descrição do Projeto
 
