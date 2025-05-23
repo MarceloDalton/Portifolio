@@ -124,6 +124,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Mostrar meus contatos
+
+  const btnMostrar = document.getElementById("btnMostrarContato");
+  const infoContato = document.getElementById("infoContato");
+
+  btnMostrar.addEventListener("click", () => {
+    const visivel = !infoContato.hasAttribute("hidden");
+    if (visivel) {
+      infoContato.setAttribute("hidden", "");
+      btnMostrar.textContent = "Mostrar Contato";
+    } else {
+      infoContato.removeAttribute("hidden");
+      btnMostrar.textContent = "Ocultar Contato";
+    }
+  });
+
+
     
 });
 

@@ -633,6 +633,98 @@ footer {
   outline: none;
 }
 
+/* Serviços da pagina */
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Máximo de 3 colunas */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.servico-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* opcional, para evitar overflow do brilho */
+  transition: 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Efeito de brilho animado */
+.servico-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 184, 148, 0) 0%,       /* transparente */
+    rgba(0, 184, 148, 0.7) 50%,    /* brilho com cor principal */
+    rgba(0, 184, 148, 0) 100%      /* transparente */
+  );
+  transform: rotate(25deg);
+  animation: shine 3s ease-in-out infinite;
+  pointer-events: none;
+  border-radius: 15px;
+}
+
+.servico-card:hover {
+  box-shadow: 0 0 15px rgba(0, 184, 148, 0.4), 0 0 25px rgba(9, 132, 227, 0.3);
+  transform: translateY(-5px);
+}
+
+
+.servico-card i {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+
+/* contatos da pagina botão é email */
+
+.contato-detalhes {
+  margin-top: 20px;
+  padding: 1rem 1.5rem;
+  max-width: 320px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center; /* centraliza texto e links */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contato-detalhes p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.contato-detalhes .social-icons a {
+  font-size: 1.5rem;
+  color: #00b894;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.contato-detalhes .social-icons a:hover {
+  transform: scale(1.2);
+  color: #0984e3;
+}
+
+
 /* Responsividade */
 @media (max-width: 600px) {
   .proj-card {
@@ -763,6 +855,8 @@ footer {
   }
 }
 
+
+/* Animação de brilho */
 @keyframes shine {
   0% {
     transform: rotate(25deg) translateX(-150%);
@@ -811,5 +905,18 @@ footer {
   100% {
     transform: translateY(-100%);
     opacity: 0;
+  }
+}
+
+/* Gird de 3 cards do serviços */
+@media (max-width: 960px) {
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
   }
 }

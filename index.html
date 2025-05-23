@@ -20,14 +20,14 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#hero"><span class="hover-underline">Home</span></a></li>
-                <li><a href="#sobre"><span class="hover-underline">Projetos</span></a></li>
-                <li><a href="#experiencias"><span class="hover-underline">Sobre</span></a></li>
+                <li><a href="#projetos"><span class="hover-underline">Projetos</span></a></li>
+                <li><a href="#servicos"><span class="hover-underline">Servicos</span></a></li>
                 <li><a href="#contato"><span class="hover-underline">Contato</span></a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="code-rain" id="codeRain"></div>
         <div class="hero-content">
     
@@ -73,7 +73,8 @@
         <!-- CENTRO: Texto em destaque -->
         <div class="sobre-texto">
             <h2>Sobre Mim</h2>
-            <p>Eu sou Marcelo Henrique e sou um desenvolvedor back-end com vasta experiência em projetos para FiveM usando Lua, JavaScript e C#. Trabalho elaborando soluções otimizadas, consistindo em desempenho, segurança e escalabilidade. Sou formado em Sistemas de Informação e possuo uma base sólida em desenvolvimento de jogos e web.</p>
+            <p>Eu sou Marcelo Henrique e sou um desenvolvedor back-end com vasta experiência em projetos para FiveM usando Lua, JavaScript e C#. Trabalho elaborando soluções otimizadas, consistindo em desempenho, segurança e escalabilidade. 
+               Sou formado em Sistemas de Informação e possuo uma base sólida em desenvolvimento de jogos e web.</p>
         </div>
 
         <!-- LADO ESQUERDO: Gráfico -->
@@ -157,7 +158,9 @@
     <!-- Sessão de Projetos -->
     <section id="projetos" class="section">
         <h2>Projetos</h2>
-        <p class="experiencias-texto">Muito projetos interessantes </p>
+        <p class="experiencias-texto">Os projetos que apresento aqui refletem minha experiência como desenvolvedor back-end, com foco em soluções para a plataforma FiveM e uso das linguagens Lua, JavaScript e C#. 
+                                      Busco sempre aliar desempenho, segurança e usabilidade, transformando ideias em sistemas funcionais e bem estruturados.
+                                      Cada trabalho representa um desafio superado com dedicação técnica e atenção aos detalhes, sempre com o objetivo de entregar resultados sólidos e eficientes.</p>
         <div class="proj-carousel-container">
 
             <button class="proj-carousel-btn prev" aria-label="Previous project">&lt;</button>
@@ -230,23 +233,69 @@
                 <p id="modalDesc"></p>
             </div>
         </div>
-
     </section>
 
+    <!-- Serviços feitos por mim -->
     <section id="servicos" class="section">
-            <h2>Serviços</h2>
-            <p class="experiencias-texto">Desenvolvimento sob medida, sistemas integrados, interfaces modernas e muito mais.</p>
+        <h2>Serviços</h2>
+        <p class="experiencias-texto">Ofereço soluções sob medida em desenvolvimento back-end, web e para servidores FiveM, sempre com foco em desempenho, segurança e experiência do usuário. 
+                                      Meu trabalho combina conhecimento técnico com atenção aos detalhes, buscando sempre entregar resultados que façam a diferença.</p>
+
+        <div class="servicos-grid">
+            <div class="servico-card">
+                <i class="fas fa-server"></i>
+                <h3>Desenvolvimento Back-End</h3>
+                <p>Criação de arquiteturas robustas para aplicações web e APIs escaláveis, com foco em performance, segurança e integração com bancos de dados.</p>
+            </div>
+            <div class="servico-card">
+                <i class="fas fa-code"></i>
+                <h3>Desenvolvimento Full Stack</h3>
+                <p>Desenvolvimento completo de aplicações web, incluindo interface moderna, responsiva e integração com sistemas back-end eficientes.</p>
+            </div>
+            <div class="servico-card">
+                <i class="fas fa-gamepad"></i>
+                <h3>Criação de Scripts para FiveM</h3>
+                <p>Desenvolvimento de scripts personalizados e otimizados para o framework Cfx.re, com lógica de gameplay, integração e segurança.</p>
+            </div>
+            <div class="servico-card">
+                <i class="fas fa-cubes"></i>
+                <h3>Desenvolvimento de Jogos</h3>
+                <p>Criação de jogos completos, desde a concepção até a implementação, com foco em jogabilidade, gráficos e experiência do usuário.</p>
+            </div>
+            <div class="servico-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Segurança da Informação</h3>
+                <p>Implementação de práticas avançadas de segurança digital, criptografia e proteção de dados para garantir a integridade dos sistemas.</p>
+            </div>
+            <div class="servico-card">
+                <i class="fas fa-tools"></i>
+                <h3>Correção e Manutenção</h3>
+                <p>Identificação e correção de falhas em sistemas existentes, além de manutenção preventiva para garantir estabilidade e atualização constante.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Sessão de contatos -->
     <section id="contato" class="section">
-        <h2>Contato</h2>
-        <form>
-            <input type="text" placeholder="Seu nome" required />
-            <input type="email" placeholder="Seu e-mail" required />
-            <textarea placeholder="Sua mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+    <h2>Contato</h2>
+    <p class="experiencias-texto">
+        Tem uma ideia, projeto ou precisa de um serviço personalizado? Entre em contato!
+    </p>
+
+    <div class="contato-reveal">
+        <button id="btnMostrarContato" class="btn-expand">Mostrar Contato</button>
+
+        <div id="infoContato" class="contato-detalhes" hidden>
+            <p><i class="fas fa-envelope"></i> marceloh156@gmail.com</p>
+            <p><i class="fas fa-phone"></i> (99) 99999-9999</p>
+            <div class="social-icons">
+                <a href="https://github.com/MarceloDalton" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/EspanhaMafia" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/marcelo.espanha/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </div>
     </section>
 
 
