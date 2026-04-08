@@ -1,8 +1,10 @@
 # Portfólio Marcelo Dalton
 
-**Versão Atual: 1.0.0**
+**Versão Atual: 2.0.0**
 
 ## Descrição do Projeto
+
+Na versão 2.0, todo o código foi reformulado e otimizado, baseando-se em meus novos conhecimentos de programação e lógica. Reformulando também todo o design do site, visando uma modernidade e maior simetria.
 
 Este projeto é um portfólio online profissional desenvolvido para apresentar meus serviços como desenvolvedor Full Stack, especialista em Back-End, desenvolvimento para FiveM, segurança da informação, e muito mais. A aplicação foi construída para ser moderna, responsiva e interativa, garantindo uma experiência fluida e atraente para visitantes e potenciais clientes.
 
