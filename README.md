@@ -1,10 +1,6 @@
 # Portfólio Marcelo Dalton
 
-<<<<<<< HEAD
 **Versão Atual: 2.0.0**
-=======
-**Versão Atual: 1.0.1**
->>>>>>> af525d4d6ebb93be9fcac23ab856e686a2c83e18
 
 ## Descrição do Projeto
 
